@@ -28,7 +28,7 @@ RUN set -x \
     && rm quicklisp.lisp.asc \
     && rm -rf "$GNUPGHOME"
 
-Clean a little bit
+# Clean a little bit
 RUN set -x \
     && xbps-remove -y gnupg \
     && xbps-remove -yo \
