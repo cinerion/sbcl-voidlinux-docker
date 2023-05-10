@@ -1,0 +1,9 @@
+#+title: SBCL Docker Image for Void Linux x86_64
+
+This project contains the Dockerfile necessary to build an image
+suitable to build CIEL for Void Linux on x86_64 with glibc on Gitlab CI
+
+Most of the current project was taken from https://gitlab.common-lisp.net/cl-docker-images/sbcl.
+
+The docker image can be found at https://hub.docker.com/r/cinerion/ciel-sbcl-voidlinux.
+
