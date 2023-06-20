@@ -34,11 +34,8 @@ RUN set -x \
     && xbps-remove -yo \
     && rm -r /var/cache/xbps
 
-# Add the script to trivially install Quicklisp and install it.
+# Add the script to trivially install Quicklisp
 COPY install-quicklisp /usr/local/bin/install-quicklisp
-RUN set -x \
-    && QUICKLISP_ADD_TO_INIT_FILE=true /usr/local/bin/install-quicklisp
-
 
 # Add the entrypoint
 WORKDIR /
