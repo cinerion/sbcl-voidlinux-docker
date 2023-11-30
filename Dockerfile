@@ -1,6 +1,8 @@
 FROM ghcr.io/void-linux/void-linux:latest-thin-x86_64
 
 RUN set -x \
+    && xbps-install -Sy \
+    && xbps-install -yu xbps \
     && xbps-install -Syu \
     && xbps-install -y bash sbcl curl wget gnupg libzstd-devel file-devel libmagic gcc libinotify-tools gzip make git tar \
     && sbcl --version
