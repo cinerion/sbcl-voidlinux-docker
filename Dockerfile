@@ -1,6 +1,8 @@
 FROM ghcr.io/void-linux/void-linux:latest-thin-x86_64
 
 RUN set -x \
+    # The following line solves https://github.com/cinerion/sbcl-voidlinux-docker/issues/1
+    && echo noextract=/etc/hosts > /etc/xbps.d/test.conf \
     && xbps-install -Sy \
     && xbps-install -yu xbps \
     && xbps-install -Syu \
